@@ -16,7 +16,7 @@ class MainTest {
         String  actual = Main.checkLengthAndContainsNum(str);
 
         // then
-        assertEquals("You have to give bigger longer password then: "+str.length()+"\n",actual);
+        assertEquals("You have to give longer password then: "+str.length()+"\n",actual);
     }
 
     @Test
@@ -28,7 +28,7 @@ class MainTest {
         String  actual = Main.checkLengthAndContainsNum(str);
 
         // then
-        assertEquals("Your password must contains numbers",actual);
+        assertEquals("Your password must contains numbers.",actual);
     }
 
 
@@ -36,14 +36,14 @@ class MainTest {
     @Test
     void containsNoNumsAndSmallerThen8() {
         //give
-        String str = "murr";
+        String str = "mu";
 
         // When
         String  actual = Main.checkLengthAndContainsNum(str);
 
         // then
-        assertEquals("You have to give bigger longer password then: " + str.length() + "\n"
-                            + "Your password must contains numbers",actual);
+        assertEquals("You have to give longer password then: " + str.length() + "\n"
+                            + "Your password must contains numbers.",actual);
     }
 
 }
